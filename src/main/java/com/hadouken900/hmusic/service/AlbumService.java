@@ -25,7 +25,7 @@ public class AlbumService {
             List<String> title1 = title.stream().map(t -> t.substring(0, t.length() - 7)).collect(Collectors.toList());
             List<Album> albums = new ArrayList<>();
             for (int i = 0; i < imgs.size(); i++) {
-                albums.add(new Album(imgs.get(i), title1.get(i)));
+                albums.add(new Album(title1.get(i), imgs.get(i)));
             }
             return albums;
         } catch (IOException e) {
